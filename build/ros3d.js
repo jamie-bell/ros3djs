@@ -51931,8 +51931,6 @@ class MeshResource extends THREE$1.Object3D {
       if (fileType.startsWith('.')) {
         fileType = fileType.substring(1, fileType.length);
       }
-      
-      console.log('ROS3d: file type provided as -> ', fileType);
     }
 
 

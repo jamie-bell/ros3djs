@@ -42,8 +42,6 @@ ROS3D.MeshResource = function(options) {
     if (fileType.startsWith('.')) {
       fileType = fileType.substring(1, fileType.length);
     }
-    
-    console.log('ROS3d: file type provided as -> ', fileType);
   }
 
 

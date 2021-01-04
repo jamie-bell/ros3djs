@@ -51902,8 +51902,6 @@ var MeshResource = /*@__PURE__*/(function (superclass) {
       if (fileType.startsWith('.')) {
         fileType = fileType.substring(1, fileType.length);
       }
-      
-      console.log('ROS3d: file type provided as -> ', fileType);
     }
 
 
