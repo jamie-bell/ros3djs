@@ -24,6 +24,9 @@ ROS3D.MeshResource = function(options) {
   var material = options.material || null;
   this.warnings = options.warnings;
 
+  // path custom
+  var extension = options.extension || null;
+
 
   // check for a trailing '/'
   if (path.substr(path.length - 1) !== '/') {
@@ -32,6 +35,17 @@ ROS3D.MeshResource = function(options) {
 
   var uri = path + resource;
   var fileType = uri.substr(-3).toLowerCase();
+
+  if (extension) {
+    fileType = extension;
+
+    if (fileType.startsWith('.')) {
+      fileType = fileType.substring(1, fileType.length);
+    }
+    
+    console.log('ROS3d: file type provided as -> ', fileType);
+  }
+
 
   // check the type
   var loaderFunc = ROS3D.MeshLoader.loaders[fileType];
